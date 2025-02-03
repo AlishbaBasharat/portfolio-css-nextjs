@@ -3,19 +3,764 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #484848;
+  --borderheaderbutton: #48B4CB;
+  --header-text: #563097;
+  --mainHeadingcolour: #623CAB;
+}
+*{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  z-index: 1;
+  /* border: 2px solid black; */
+  padding: 0px 100px;
+  color: var(--foreground);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom:1px solid #ebebeb;
+
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo Image {
+  width: 50px;
+  height: 50px;
+}
+
+.headerButton {
+  display: flex;
+  list-style: none;
+}
+
+.headerButton li {
+  margin: 0px 20px;
+  font-size: 18px;
+  padding: 5px 0px;
+}
+
+.headerButton li:hover {
+  transition: 0.2s;
+  border-top: 2px solid var(--borderheaderbutton);
+  border-bottom: 2px solid var(--borderheaderbutton);
+}
+
+@media only screen and (max-width:750px) {
+  .header {
+    padding: 0px 50px;
   }
 }
 
-body {
+@media only screen and (max-width:620px) {
+  .headerButton li {
+    margin: 0px 10px;
+  }
+}
+
+@media only screen and (max-width:560px) {
+  .header {
+    padding: 0px 30px;
+  }
+
+  .headerButton li {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:460px) {
+  .header {
+    flex-direction: column;
+    height: fit-content;
+    padding: 0px 10px
+  }
+
+  .headerButton li {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:340px) {
+  .header {
+    padding: 0px 5px
+  }
+
+  .headerButton li {
+    margin: 0px 6px;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
+  /* border: 2px solid black; */
+}
+
+.maindetail {
+  width: 550px;
+  height: fit-content;
+  margin-top: 103px;
+  /* border: 2px solid black; */
+}
+
+.mainHeading {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
+}
+
+.mainMainHeading {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.mainHeadings {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--foreground);
+  padding-bottom: 20px;
+}
+
+.main span {
+  color: var(--mainHeadingcolour);
+}
+
+.main h1 span {
+  color: var(--mainHeadingcolour);
+  text-shadow: 2px 2px 2px var(--borderheaderbutton);
+}
+
+.mainpara {
+  font-size: 22px;
+  color: var(--foreground);
+}
+
+.mypic {
+  height: 400px;
+  margin: 100px 0px;
+}
+
+.mypic img {
+  width: 100%;
+  height: 100%;
+}
+
+.leftButton {
+  padding: 10px 50px;
+  background-color: var(--header-text);
+  color: var(--borderheaderbutton);
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.leftButton:hover {
+  border: 2px solid var(--header-text);
+  background-color: white;
+  color: var(--header-text);
+}
+
+.rightButton {
+  border: 2px solid var(--header-text);
+  padding: 10px 40px;
+  color: var(--header-text);
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.rightButton:hover {
+  background-color: var(--header-text);
+  color: var(--borderheaderbutton);
+}
+
+@media only screen and (max-width: 970px) {
+  .main {
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+
+  .mainHeading {
+    text-align: center;
+
+  }
+
+  .mainMainHeading {
+    text-align: center;
+
+  }
+
+  .mainHeadings {
+    text-align: center;
+
+  }
+
+  .mypic {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .maindetail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .maindetail {
+    text-align: center;
+  }
+
+  .mainHeading {
+    font-size: 22px;
+    padding-bottom: 0px;
+  }
+
+  .mainMainHeading {
+    font-size: 40px;
+  }
+
+  .mainHeadings {
+    font-size: 25px;
+  }
+
+  .mainpara {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width:435px) {
+  .mypic {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width:385px) {
+  .main {
+    padding: 10px 5px;
+  }
+
+  .mypic {
+    height: 300px;
+  }
+
+  .maindetail {
+    width: 400px;
+  }
+
+  .mainMainHeading {
+    font-size: 35px;
+  }
+
+  .mainHeading {
+    font-size: 18px;
+    padding-bottom: 2px;
+  }
+
+  .mainHeadings {
+    font-size: 22px;
+  }
+
+  .mainpara {
+    font-size: 16px;
+  }
+
+  .leftButton {
+    padding: 8px 35px;
+    margin-right: 5px;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .rightButton {
+    border: 2px solid var(--header-text);
+    padding: 7px 25px;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width:320px) {
+  .mypic {
+    height: 280px;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
+  /* border: 2px solid black; */
+}
+
+.aboutmypic {
+  height: 400px;
+  margin: 135px 0px;
+  /* border: 2px solid black; */
+
+}
+
+.aboutmypic img {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutdetail {
+  width: 550px;
+  height: fit-content;
+  margin-top: 90px;
+  /* border: 2px solid black; */
+}
+
+.aboutMainHeading {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--foreground);
+}
+
+.about span {
+  color: var(--mainHeadingcolour);
+}
+
+.about h1 span {
+  color: var(--mainHeadingcolour);
+  text-shadow: 2px 2px 2px var(--borderheaderbutton);
+}
+
+.aboutpara {
+  font-size: 22px;
+  color: var(--foreground);
+}
+
+@media only screen and (max-width: 970px) {
+  .about {
+    display: flex;
+    height: fit-content;
+    text-align: center;
+  }
+
+  .aboutmypic {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .aboutdetail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .aboutMainHeading {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutdetail {
+    text-align: center;
+  }
+
+  .aboutMainHeading {
+    font-size: 40px;
+  }
+
+  .aboutpara {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width:435px) {
+  .aboutmypic {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width:385px) {
+  .about {
+    padding: 10px 5px;
+  }
+
+  .aboutmypic {
+    height: 300px;
+  }
+
+  .aboutdetail {
+    width: 400px;
+  }
+
+  .aboutMainHeading {
+    font-size: 35px;
+  }
+
+  .aboutpara {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:320px) {
+  .aboutmypic {
+    height: 280px;
+  }
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  flex-wrap: wrap;
+  overflow: auto;
+  /* border: 2px solid black; */
+}
+
+.portfoliodetail {
+  height: fit-content;
+  margin-top: 90px;
+  text-align: center;
+}
+
+.portfolioMainHeading {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.portfolio span {
+  color: var(--mainHeadingcolour);
+}
+
+.portfolio h1 span {
+  color: var(--mainHeadingcolour);
+  text-shadow: 2px 2px 2px var(--borderheaderbutton);
+}
+
+.portfoliopara {
+  font-size: 22px;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.parentContainer {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: auto;
+  padding-bottom: 30px;
+}
+
+.childContainer {
+  background-color: white;
+  border-radius: 20px;
+  width: 320px;
+  height: fit-content;
+  padding: 10px;
+  margin: 30px;
+  cursor: pointer;
+  border: 2px solid var(--header-text);
+}
+
+.childContainer:hover {
+  transform: scale(1.02);
+  box-shadow: var(--borderheaderbutton) 0px 5px 15px;
+}
+
+.projectButton {
+  margin-top: 10px;
+  border: 2px solid var(--header-text);
+  color: var(--header-text);
+  padding: 5px 40px;
+  border-radius: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+
+.projectButton:hover {
+  background-color: var(--header-text);
+  color: var(--borderheaderbutton);
+  border: 2px solid var(--borderheaderbutton);
+}
+
+.portfolio img {
+  border: 1px solid var(--mainHeadingcolour);
+}
+
+@media only screen and (max-width: 970px) {
+  .portfoliodetail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .portfolioMainHeading {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolioMainHeading {
+    font-size: 40px;
+  }
+
+  .portfoliopara {
+    font-size: 20px;
+  }
+
+  .projectButton {
+    padding: 5px 20px;
+    border-radius: 35px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:385px) {
+  .portfolio {
+    padding: 10px 5px;
+  }
+
+  .portfolioMainHeading {
+    font-size: 35px;
+  }
+
+  .portfoliopara {
+    font-size: 16px;
+  }
+}
+.contactMainBody {
+  width: 100%; 
+  margin: 100px 0px;
+}
+.section-wrapper .container form{
+  overflow-y: hidden;
+}
+.section-wrapper .container .contact-links a{
+  overflow-y: hidden;
+}
+.email-contact p{
+  overflow-y: hidden;
+}
+.contactMainBody h2 {
+  font-size: 60px; 
+  font-weight: bold;
+  text-align: center;
+  margin: 0px 20px;
+  color: var(--foreground);
+}
+.contactMainBody h2 span {
+  color: var(--header-text);
+  text-shadow: 2px 2px 2px var(--borderheaderbutton);
+}
+
+.contactMainBody p {
+  text-align: center;
+  font-size: 22px;
+  color: var(--foreground);
+}
+
+.form-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.section-wrapper {
+  padding: 30px 0;
+  width: 500px;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 600px;
+  border: 2px solid transparent;
+  background-color:#623CAB;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: var(--borderheaderbutton) 0px 1px 2px 0px, var(--borderheaderbutton) 0px 2px 6px 2px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container input,
+.container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(233, 233, 233);
+  background-color:white;
+  color: var(--foreground);
+  transition: border 0.5s;
+}
+.container textarea{
+  height: 150px;
+}
+
+.container input:focus,
+.container textarea:focus {
+  border-color: var(--borderheaderbutton)
+}
+
+.container button {
+  width: 100%;
+  padding:15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--primary-purple);
+  background: linear-gradient(to top, var(--header-text), var(--borderheaderbutton));
+  transition: all 0.3s;
+  color: white;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, var(--header-text), var(--borderheaderbutton));
+  color: var(--background-light);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-links a button {
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.contact-links a button:hover {
+  transform: scale(1.1);
+}
+
+.email-contact {
+  margin-top: 20px;
+}
+.email-contact p {
+  font-size: 16px;
+  color: white;
+}
+
+.email-contact a {
+  color: var(--borderheaderbutton);
+  border: 1px solid var(--borderheaderbutton);
+  background-color: var(--header-text);
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.email-contact a:hover {
+  color: white;
+  background-color: var(--header-text);
+  transform: scale(1.05);
+}
+@media screen and (max-width:550px) {
+  .contactMainBody{
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .contactMainBody {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contactMainBody h2 {
+    font-size: 40px;
+  }
+
+  .contactMainBody p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width:385px) {
+  .contactMainBody {
+    padding: 10px 5px;
+  }
+
+  .contactMainBody h2 {
+    font-size: 35px;
+  }
+
+  .contactMainBody p {
+    font-size: 16px;
+  }
+}
+.footer{
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color:  var(--foreground);
+  padding: 15px;
+  border-top:1px solid #ebebeb;
+}
+.footerpara a{
+  color: var(--header-text);
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+     
+  }
+}
+ 
+@media only screen and (max-width: 410px) {
+  .footer {
+      font-size: 18px;
+     
+  }
 }
