@@ -1,3 +1,4 @@
+import Link from "next/link"
 export default function Contact() {
     return (
     <div className="contactMainBody" id="contact">
@@ -13,12 +14,12 @@ export default function Contact() {
                     <button type="submit">Send Message</button>
                 </form>
                 <div className="contact-links">
-                    <a href="" target="_blank">
+                    <Link href="" target="_blank">
                         <button>LinkedIn</button>
-                    </a>
-                    <a href="https://github.com/AlishbaBasharat" target="_blank">
+                    </Link>
+                    <Link href="https://github.com/AlishbaBasharat">
                         <button>GitHub</button>
-                    </a>
+                    </Link>
                 </div>
                 <div className="email-contact">
                     <p>Prefer direct email? Reach us at <a href="mailto:alishbaali4413.com">alishbaali4413@gmail.com</a></p>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import image1 from "../data/health blog.jpg";
 import image2 from "../data/counter application.jpg";
 import image3 from "../data/number guessing.jpg";
@@ -23,7 +24,7 @@ export default function Portfolio(){
                         style={{ borderRadius: '5%' }}
                          />
                 </div>
-                <a href="/"><button className="projectButton">Health Blog</button></a>
+                <Link href="/"><button className="projectButton">Health Blog</button></Link>
             </div>
             <div className="childContainer">
                 <div className="imageContainer">
@@ -35,7 +36,7 @@ export default function Portfolio(){
                         style={{ borderRadius: '5%' }}
                          />
                 </div>
-                <a href=""><button className="projectButton">Counter Application</button></a>
+                <Link href=""><button className="projectButton">Counter Application</button></Link>
             </div>
             <div className="childContainer">
                 <div className="imageContainer">
@@ -47,7 +48,7 @@ export default function Portfolio(){
                         style={{ borderRadius: '5%' }}
                          />
                 </div>
-                <a href=""><button className="projectButton">Number Guessing Game</button></a>
+                <Link href=""><button className="projectButton">Number Guessing Game</button></Link>
             </div>
             <div className="childContainer">
                 <div className="imageContainer">
@@ -59,7 +60,7 @@ export default function Portfolio(){
                         style={{ borderRadius: '5%' }}
                          />
                 </div>
-                <a href=""><button className="projectButton">ATM Machine</button></a>
+                <Link href=""><button className="projectButton">ATM Machine</button></Link>
             </div>
             <div className="childContainer">
                 <div className="imageContainer">
@@ -71,7 +72,7 @@ export default function Portfolio(){
                         style={{ borderRadius: '5%' }}
                          />
                 </div>
-                <a href=""><button className="projectButton">Quiz Application</button></a>
+                <Link href=""><button className="projectButton">Quiz Application</button></Link>
             </div>
             <div className="childContainer">
                 <div className="imageContainer">
@@ -83,7 +84,7 @@ export default function Portfolio(){
                         style={{ borderRadius: '5%' }}
                          />
                 </div>
-                <a href=""><button className="projectButton">To Do List</button></a>
+                <Link href=""><button className="projectButton">To Do List</button></Link>
             </div>
         </div>
         </div>

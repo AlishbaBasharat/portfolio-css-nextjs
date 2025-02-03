@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import mainMyPic from "../data/Main pic.png"
+
 export default function Main() {
     return (
         <div className="main">
@@ -8,8 +11,8 @@ export default function Main() {
                 <h1 className=" mainMainHeading"><span> Alishba Basharat</span> </h1>
                 <h2 className="mainHeadings">And I&apos;m a <span> Frontend Developer</span> </h2>
                 <p className="mainpara">Creative and dedicated Frontend Developer, crafting responsive and engaging user experiences.</p>
-                <a href=""><button className="leftButton">Hire me</button></a>
-                <a href="https://github.com/AlishbaBasharat"><button className="rightButton">See Projects</button></a>
+                <Link href=""><button className="leftButton">Hire me</button></Link>
+                <Link href="https://github.com/AlishbaBasharat"><button className="rightButton">See Projects</button></Link>
             </div>
             <div className="mypic">
                 <Image className="picture"
